@@ -50,6 +50,7 @@ values."
      syntax-checking
      version-control
      django
+     ;; Need to install tern package globally by npm i tern -g
      react
      )
    ;; List of additional packages that will be installed without being
