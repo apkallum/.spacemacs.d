@@ -312,8 +312,16 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+  ;; Add TODO states
   (setq org-todo-keywords
         '((sequence "TODO(t)" "NEXT(n)" "WAITING(w)" "|" "DONE(d)" "CANCELLED(c)")))
+  ;; Add bidirectional support
+  (defun set-bidi-env ()
+    "interactive"
+    (setq bidi-paragraph-direction 'nil))
+  (add-hook 'org-mode-hook 'set-bidi-env)
+  ;; Add Arabic support
+  (when window-system (set-fontset-font "fontset-default" '(#x600 . #x6ff) "DejaVu Sans Mono"))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
