@@ -1,7 +1,7 @@
 #key : jfd
 #name : Adds scaffolding for journaling in a day, with sections on projects, work, learning, thoughts.
 # --
-* Projects
-* Work
-* Learning
-* Thoughts
+** Projects
+** Work
+** Learning
+** Thoughts
